@@ -1,7 +1,10 @@
 from collections import defaultdict
-class_list = ('Class-V', 'Class-VI', 'Class-VII', 'Class-VIII')
-id_list = (1, 2, 2, 3)
-temp = defaultdict(set)
-for c, i in zip(class_list, id_list):
-    temp[c].add(i)
-print(temp)
+
+class_list = (("VII", 1), ("V", 1), ("V", 2), ("VI", 1), ("VI", 2), ("VI", 3))
+
+id_list = defaultdict(list)
+
+for c, i in class_list:
+    id_list[c].append(i)
+
+print(id_list)
